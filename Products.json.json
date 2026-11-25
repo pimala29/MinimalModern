@@ -1,0 +1,22 @@
+[
+  {
+    "id": "choc-midnight-sea-salt",
+    "name": "Midnight 72% Sea Salt",
+    "mood": "confident",
+    "type": "dark",
+    "size": "80g",
+    "price": 185,
+    "image": "images/midnight-sea-salt.jpg",
+    "description": "ดาร์กช็อกโกแลตเข้มข้น 72% ตัดรสด้วยเกลือสมุทรเกล็ดเล็ก ๆ ให้ความกลมกล่อมไม่ขมโดด"
+  },
+  {
+    "id": "choc-velvet-hojicha-almond",
+    "name": "Velvet Hojicha & Almond",
+    "mood": "sweet",
+    "type": "milk",
+    "size": "80g",
+    "price": 195,
+    "image": "images/velvet-hojicha-almond.jpg",
+    "description": "ช็อกโกแลตนมเนื้อเนียนผสมผงชาโฮจิฉะคั่วหอมกรุ่น แทรกความกรุบกรอบของอัลมอนด์อบ"
+  }
+]

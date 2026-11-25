@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>จัดการคำสั่งซื้อ — ATELIER CACAO</title>
+
+  <!-- Google Fonts: Serif Luxury + Clean Sans-Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+Thai:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .site-header {
+      border-bottom: 1px solid var(--border-subtle);
+      background-color: var(--bg-page);
+    }
+    .site-header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 1.5rem;
+    }
+    .brand-wordmark {
+      font-size: 1.25rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(1.25rem, 3vw, 2.5rem);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+    }
+    .site-nav a:hover {
+      color: var(--accent-bronze-hover);
+    }
+    .page-head {
+      margin-bottom: var(--space-lg);
+    }
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+    }
+    #ordersTable {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 780px;
+      text-align: left;
+    }
+    #ordersTable thead {
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid var(--border-strong);
+    }
+    #ordersTable th {
+      padding: 1.1rem 1.25rem;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      white-space: nowrap;
+    }
+    #ordersTable td {
+      padding: 1.05rem 1.25rem;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+    #ordersTable tbody tr:last-child td {
+      border-bottom: none;
+    }
+    #ordersTable tbody tr:hover {
+      background-color: var(--bg-page);
+    }
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding-block: 2.75rem;
+      margin-top: var(--space-xl);
+    }
+    .site-footer__inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Minimal Top Navigation -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand-wordmark font-serif">ATELIER CACAO</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">หน้าแรก</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+        <a href="admin.html" aria-current="page">รายการสั่งซื้อ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="page-head">
+        <span class="eyebrow">Order Management</span>
+        <h1 class="section-title heading-accent-line">รายการคำสั่งซื้อทั้งหมด</h1>
+        <p class="lead">
+          ข้อมูลคำสั่งซื้อล่าสุดจากลูกค้า เรียงลำดับจากรายการล่าสุดขึ้นก่อน
+        </p>
+      </div>
+
+      <div class="table-wrap">
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th>วันเวลา</th>
+              <th>ชื่อลูกค้า</th>
+              <th>เบอร์โทร/Line</th>
+              <th>รายการสินค้า</th>
+              <th>จำนวนเงินรวม</th>
+              <th>หมายเหตุ</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span class="brand-wordmark font-serif">ATELIER CACAO</span>
+      <p class="text-muted">Minimal &amp; Modern Craft Chocolate</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

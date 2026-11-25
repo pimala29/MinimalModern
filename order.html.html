@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>สั่งซื้อสินค้า — ATELIER CACAO</title>
+
+  <!-- Google Fonts: Serif Luxury + Clean Sans-Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+Thai:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .site-header {
+      border-bottom: 1px solid var(--border-subtle);
+      background-color: var(--bg-page);
+    }
+    .site-header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 1.5rem;
+    }
+    .brand-wordmark {
+      font-size: 1.25rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(1.25rem, 3vw, 2.5rem);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+    }
+    .site-nav a:hover {
+      color: var(--accent-bronze-hover);
+    }
+    .order-wrap {
+      max-width: 640px;
+      margin-inline: auto;
+    }
+    .page-head {
+      margin-bottom: var(--space-lg);
+    }
+    .order-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: clamp(1.75rem, 4vw, 3rem);
+    }
+    .order-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .form-label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      background-color: var(--bg-page);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      transition: border-color var(--transition-base), background-color var(--transition-base);
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-bronze);
+      background-color: var(--bg-card);
+    }
+    .form-control::placeholder {
+      color: var(--text-muted);
+      opacity: 0.75;
+    }
+    textarea.form-control {
+      min-height: 104px;
+      resize: vertical;
+    }
+    .form-actions {
+      margin-top: 0.5rem;
+    }
+    .form-actions .btn {
+      width: 100%;
+    }
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding-block: 2.75rem;
+      margin-top: var(--space-xl);
+    }
+    .site-footer__inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Minimal Top Navigation -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand-wordmark font-serif">ATELIER CACAO</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html#moods">Moods</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+        <a href="order.html" aria-current="page">สั่งซื้อ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="order-wrap">
+        <div class="page-head">
+          <span class="eyebrow">Order Placement</span>
+          <h1 class="section-title heading-accent-line">รายละเอียดคำสั่งซื้อ</h1>
+          <p class="lead">
+            กรุณากรอกข้อมูลผู้รับและตรวจสอบรายการช็อกโกแลตก่อนกดยืนยันสั่งซื้อ
+          </p>
+        </div>
+
+        <div class="order-card">
+          <form id="orderForm" class="order-form">
+            <div class="form-group">
+              <label for="customerName" class="form-label">ชื่อลูกค้า</label>
+              <input
+                type="text"
+                id="customerName"
+                name="customerName"
+                class="form-control"
+                placeholder="ระบุชื่อ-นามสกุลผู้รับ"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="contact" class="form-label">เบอร์โทร / Line</label>
+              <input
+                type="text"
+                id="contact"
+                name="contact"
+                class="form-control"
+                placeholder="เช่น 08x-xxx-xxxx หรือ Line ID"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="items" class="form-label">รายการสินค้า</label>
+              <input
+                type="text"
+                id="items"
+                name="items"
+                class="form-control"
+                placeholder="ชื่อรายการสินค้าที่เลือก"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="total" class="form-label">จำนวนเงินรวม (บาท)</label>
+              <input
+                type="number"
+                id="total"
+                name="total"
+                class="form-control"
+                placeholder="0"
+                step="any"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="note" class="form-label">หมายเหตุ (ถ้ามี)</label>
+              <textarea
+                id="note"
+                name="note"
+                class="form-control"
+                placeholder="ที่อยู่จัดส่ง ข้อความการ์ดอวยพร หรือรายละเอียดเพิ่มเติม"
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn--solid-subtle">ยืนยันสั่งซื้อ</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span class="brand-wordmark font-serif">ATELIER CACAO</span>
+      <p class="text-muted">Minimal &amp; Modern Craft Chocolate</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

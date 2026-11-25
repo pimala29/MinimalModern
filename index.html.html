@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATELIER CACAO — Minimalist Craft Chocolate</title>
+
+  <!-- Google Fonts: Serif Luxury + Clean Sans-Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+Thai:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .site-header {
+      border-bottom: 1px solid var(--border-subtle);
+      background-color: var(--bg-page);
+    }
+    .site-header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+      gap: 1.5rem;
+    }
+    .brand-wordmark {
+      font-size: 1.25rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(1.25rem, 3vw, 2.5rem);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+    }
+    .site-nav a:hover {
+      color: var(--accent-bronze-hover);
+    }
+    .hero {
+      min-height: calc(100vh - 76px);
+      display: flex;
+      align-items: center;
+      padding-block: clamp(4rem, 9vw, 8rem);
+    }
+    .hero__inner {
+      max-width: 920px;
+    }
+    .hero__title {
+      font-size: clamp(1.85rem, 3.8vw, 3.1rem);
+      line-height: 1.42;
+      margin-bottom: var(--space-md);
+      color: var(--text-primary);
+    }
+    .hero__subtitle {
+      margin-bottom: var(--space-lg);
+    }
+    .section-header {
+      margin-bottom: var(--space-lg);
+    }
+    .mood-card {
+      justify-content: space-between;
+      min-height: 230px;
+    }
+    .mood-card__top {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+    .mood-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .mood-card__link {
+      margin-top: auto;
+      padding-top: var(--space-sm);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-bronze-hover);
+    }
+    .site-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding-block: 2.75rem;
+    }
+    .site-footer__inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Minimal Top Navigation -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand-wordmark font-serif">ATELIER CACAO</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#moods">Moods</a>
+        <a href="product.html">สินค้าทั้งหมด</a>
+        <a href="order.html">สั่งซื้อ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section (Full Viewport, Quiet Luxury) -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <span class="eyebrow">Small-Batch Craft Chocolate</span>
+        <h1 class="display-title hero__title">
+          ดื่มด่ำกับความเข้มข้นของโกโก้แท้ 72% ที่ให้รสสัมผัสลุ่มลึก ตัดกับความเค็มละมุนปลายลิ้นของเกลือสมุทรธรรมชาติ ช่วยชูรสช็อกโกแลตให้กลมกล่อมและมีมิติอย่างลงตัว
+        </h1>
+        <p class="lead hero__subtitle">
+          คัดสรรเมล็ดโกโก้คุณภาพและวัตถุดิบธรรมชาติ ถ่ายทอดความเรียบหรูในทุกคำที่ละลายอย่างช้าๆ
+        </p>
+        <div class="hero__actions">
+          <a href="product.html" class="btn">ดูสินค้าทั้งหมด</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Moods Section -->
+    <section id="moods" class="section section--surface">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Curated by Mood</span>
+          <h2 class="section-title heading-accent-line">เลือกช็อกโกแลตตามอารมณ์ของคุณ</h2>
+          <p class="lead">
+            สัมผัสความต่างในแต่ละช่วงเวลา ผ่านเฉดรสชาติที่ออกแบบอย่างประณีต
+          </p>
+        </div>
+
+        <div class="grid grid--2">
+          <!-- Mood 1: Fresh -->
+          <a href="product.html?mood=fresh" class="card mood-card">
+            <div class="mood-card__top">
+              <span class="mood-dot mood-dot--fresh" aria-hidden="true"></span>
+              <span class="mood-label">Fresh</span>
+            </div>
+            <h3 class="card-title heading-accent-line heading-accent-line--fresh">
+              โปร่งเบา สดชื่น สบายใจ
+            </h3>
+            <p class="text-muted">
+              โทนสัมผัสที่ช่วยให้วันธรรมดาดูผ่อนคลาย ไม่หนักเกินไป เหมาะกับช่วงเวลาพักสายตา
+            </p>
+            <span class="mood-card__link">เลือกดูหมวด Fresh &rarr;</span>
+          </a>
+
+          <!-- Mood 2: Sweet -->
+          <a href="product.html?mood=sweet" class="card mood-card">
+            <div class="mood-card__top">
+              <span class="mood-dot mood-dot--sweet" aria-hidden="true"></span>
+              <span class="mood-label">Sweet</span>
+            </div>
+            <h3 class="card-title heading-accent-line heading-accent-line--sweet">
+              ละมุน นุ่มนวล ชวนยิ้ม
+            </h3>
+            <p class="text-muted">
+              ความหวานที่สมดุลอย่างพอดี เติมความอ่อนโยนให้ช่วงเวลาสั้นๆ ที่ต้องการความสบายใจ
+            </p>
+            <span class="mood-card__link">เลือกดูหมวด Sweet &rarr;</span>
+          </a>
+
+          <!-- Mood 3: Confident -->
+          <a href="product.html?mood=confident" class="card mood-card">
+            <div class="mood-card__top">
+              <span class="mood-dot mood-dot--confident" aria-hidden="true"></span>
+              <span class="mood-label">Confident</span>
+            </div>
+            <h3 class="card-title heading-accent-line heading-accent-line--confident">
+              เข้มข้น สุขุม มีมิติ
+            </h3>
+            <p class="text-muted">
+              ดาร์กช็อกโกแลต 72% ตัดเกลือสมุทรเกล็ดเล็กๆ กลมกล่อมไม่ขมโดด สำหรับคนที่ชัดเจนในตัวตน
+            </p>
+            <span class="mood-card__link">เลือกดูหมวด Confident &rarr;</span>
+          </a>
+
+          <!-- Mood 4: Romance -->
+          <a href="product.html?mood=romance" class="card mood-card">
+            <div class="mood-card__top">
+              <span class="mood-dot mood-dot--romance" aria-hidden="true"></span>
+              <span class="mood-label">Romance</span>
+            </div>
+            <h3 class="card-title heading-accent-line heading-accent-line--romance">
+              อบอุ่น ชวนฝัน ละเมียดละไม
+            </h3>
+            <p class="text-muted">
+              ช็อกโกแลตนมเนื้อเนียนผสานกลิ่นชาโฮจิฉะคั่วหอมและอัลมอนด์อบ ให้ความรู้สึกน่าจดจำ
+            </p>
+            <span class="mood-card__link">เลือกดูหมวด Romance &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span class="brand-wordmark font-serif">ATELIER CACAO</span>
+      <p class="text-muted">Minimal &amp; Modern Craft Chocolate</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
